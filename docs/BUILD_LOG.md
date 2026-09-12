@@ -44,7 +44,7 @@ This log records the decisions and technical lessons behind the portfolio so the
 
 **Task:** Make the section faster to scan and give each type of information a clear home.
 
-**Action:** I replaced the mixed layout with three numbered groups: Education, Technical Toolkit, and Experience & Leadership. Each group uses one consistent internal structure and its own visual boundary.
+**Action:** I replaced the mixed layout with five numbered groups: Education, Technical Toolkit, Leadership & Achievements, Professional Experience, and Part-time Experience. Graded coursework now has a dedicated results grid instead of being buried in a paragraph.
 
 **Result:** The profile now has a visible hierarchy, cleaner alignment, and less competition between unrelated content.
 
@@ -74,3 +74,14 @@ This log records the decisions and technical lessons behind the portfolio so the
 
 **Learning point:** Deployment is part of software quality: source state, built artifacts, access control, and the live version must all agree.
 
+## 7. Adding motion without losing clarity
+
+**Situation:** The first complete version was clean and usable, but it felt too static beside more expressive developer portfolios.
+
+**Task:** Add a stronger sense of craft without copying a reference site or making the page feel effects-led.
+
+**Action:** I added a progress indicator tied to page scroll, pointer-responsive depth and lighting on the LifeOS panel, animated project-filter transitions, tactile project-card hovers, and a hand-drawn underline reveal. Every effect is disabled or simplified when reduced motion is requested.
+
+**Result:** The portfolio feels more responsive and distinctive while the content hierarchy remains the main focus.
+
+**Learning point:** Good interface motion explains state or rewards interaction. It should be layered onto a clear information architecture, not used to hide a weak one.

@@ -21,7 +21,7 @@ doc = SimpleDocTemplate(
     leftMargin=15 * mm,
     topMargin=14 * mm,
     bottomMargin=13 * mm,
-    title="Tayeba Khan — CV",
+    title="Tayeba Khan - CV",
     author="Tayeba Khan",
 )
 
@@ -72,7 +72,7 @@ story = []
 header = Table(
     [[
         Paragraph("TAYEBA KHAN", styles["name"]),
-        Paragraph("London, United Kingdom<br/>Software engineering &amp; AI placement candidate", styles["meta"]),
+        Paragraph("London, United Kingdom<br/>github.com/tayebakhan<br/>Software engineering &amp; AI placement candidate", styles["meta"]),
     ]],
     colWidths=[116 * mm, 64 * mm],
 )
@@ -92,7 +92,7 @@ story.append(Paragraph("EDUCATION", styles["section"]))
 edu = Table(
     [[
         Paragraph("BSc Computer Science (Artificial Intelligence)", styles["role"]),
-        Paragraph("2025 – present", styles["meta"]),
+        Paragraph("2025 - present", styles["meta"]),
     ]],
     colWidths=[143 * mm, 37 * mm],
 )
@@ -101,22 +101,23 @@ story.extend([
     edu,
     Paragraph("Brunel University London", styles["sub"]),
     bullet("Relevant study: software design and implementation, introductory programming, logic and computation, databases, information systems, and collaborative project delivery."),
+    bullet("Selected results: Logic and Computation (A*); Information Systems and Organisations (A); Software Design and Implementation (A); Introductory Programming (B+); Programming Applications (B+)."),
 ])
 
 story.append(Paragraph("SELECTED TECHNICAL PROJECTS", styles["section"]))
 story.extend([
-    Paragraph("LifeOS — Agentic Personal-Administration System", styles["role"]),
+    Paragraph("LifeOS - Agentic Personal-Administration System", styles["role"]),
     Paragraph("Python · Gemini · Google ADK · Google Cloud · REST APIs", styles["sub"]),
     bullet("Built an evidence-first agent that extracts facts and obligations from documents, flags missing information, and produces editable next actions without presenting assumptions as facts."),
     bullet("Refactored domain-specific logic into generic admin items and added GET/PATCH API endpoints so multiple documents can feed one manageable workflow."),
     bullet("Diagnosed authentication and model-region failures, validated PDF extraction with real document structures, and kept deadline planning deterministic where reliability mattered."),
     Spacer(1, 3),
-    Paragraph("SwiftBot Traffic-Light Rover — Team Software Design Project", styles["role"]),
+    Paragraph("SwiftBot Traffic-Light Rover - Team Software Design Project", styles["role"]),
     Paragraph("Java · Maven · SwiftBot API · Camera classification · Testing", styles["sub"]),
     bullet("Designed a modular control system that detects coloured signals within 30 cm, executes timed manoeuvres, handles button input, and produces an execution log."),
     bullet("Improved unreliable RGB classification, corrected control mappings, resolved dependency issues, and implemented sensitivity modes plus safe termination flows."),
     Spacer(1, 3),
-    Paragraph("Java Task Manager — Independent Build", styles["role"]),
+    Paragraph("Java Task Manager - Independent Build", styles["role"]),
     Paragraph("Java · Collections · Object-oriented programming · Input validation", styles["sub"]),
     bullet("Turned first-year programming concepts into a complete productivity tool for creating, organizing, and tracking tasks using structured objects and mutable collections."),
 ])
@@ -140,19 +141,21 @@ story.append(skills)
 
 story.append(Paragraph("EXPERIENCE & LEADERSHIP", styles["section"]))
 story.extend([
-    Paragraph("Group Project — Task Lead", styles["role"]),
+    Paragraph("READY Programme Finalist - 2025", styles["role"]),
+    bullet("Recognised for professional development, initiative, and career readiness through Brunel University's READY Programme."),
+    Paragraph("Group Project - Task Lead", styles["role"]),
     bullet("Planned work, distributed roles, set soft deadlines, and kept a university team moving when communication slowed."),
-    Paragraph("Back of House — Nando’s Westfield", styles["role"]),
-    bullet("Maintained accuracy during high-volume service and coordinated opening, closing, restocking, and rush-period work within a fast team."),
-    Paragraph("Earlier experience — Marketing Intern, IELTS Instructor and Cashier", styles["role"]),
-    bullet("Developed audience-aware communication, confidence explaining unfamiliar ideas, customer service, and day-to-day commercial discipline."),
+    Paragraph("Professional experience", styles["role"]),
+    bullet("Marketing Intern at MarcoPolo.ai, IELTS Instructor at Mentors' Bangladesh, and Content Writer at Falcon Academy of Sciences."),
+    Paragraph("Part-time & customer-facing experience", styles["role"]),
+    bullet("Back of House at Nando's Westfield, Cashier at North End Coffee Roasters, and Store Assistant/Cashier at Shwapno."),
 ])
 
 story.append(Spacer(1, 5))
 story.append(rule())
 story.append(Spacer(1, 5))
 story.append(Paragraph(
-    "This private portfolio version intentionally omits personal contact links. Add verified email, LinkedIn, and GitHub details before sharing with recruiters.",
+    "This private portfolio version intentionally omits personal email and LinkedIn details. Add those verified links before sharing with recruiters.",
     styles["sub"],
 ))
 

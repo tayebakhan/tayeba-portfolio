@@ -1,4 +1,4 @@
-# Tayeba Khan — Portfolio
+# Tayeba Khan - Portfolio
 
 A recruiter-focused personal portfolio designed and built for software engineering, AI, and technology placement applications.
 
@@ -18,13 +18,14 @@ The result is deliberately editorial and compact. It uses strong typography, vis
 
 ## Key features
 
-- **Flagship project storytelling** — LifeOS receives the deepest case study, with its problem, technical approach, and reliability decisions made visible.
-- **Project filtering** — recruiters can switch between AI + cloud, software, and robotics work without leaving the page.
-- **Expandable engineering notes** — native accessible disclosure controls reveal challenges, approaches, and solutions on demand.
-- **Structured profile** — education, technical toolkit, and experience are separated into clear numbered sections.
-- **Downloadable CV** — a one-page PDF profile is generated and bundled with the production build.
-- **Responsive navigation** — the layout and navigation adapt for desktop, tablet, and mobile screens.
-- **Accessibility details** — semantic HTML, keyboard-visible focus states, reduced-motion support, live filter feedback, and a skip link.
+- **Flagship project storytelling** - LifeOS receives the deepest case study, with its problem, technical approach, and reliability decisions made visible.
+- **Project filtering** - recruiters can switch between AI + cloud, software, and robotics work without leaving the page.
+- **Expandable engineering notes** - native accessible disclosure controls reveal challenges, approaches, and solutions on demand.
+- **Structured profile** - education, graded coursework, technical toolkit, leadership, professional experience, and part-time work are separated into clear numbered sections.
+- **Purposeful motion** - scroll progress, cursor-responsive depth, animated project states, and tactile hover feedback add character without distracting from the content.
+- **Downloadable CV** - a one-page PDF profile is generated and bundled with the production build.
+- **Responsive navigation** - the layout and navigation adapt for desktop, tablet, and mobile screens.
+- **Accessibility details** - semantic HTML, keyboard-visible focus states, reduced-motion support, live filter feedback, and a skip link.
 
 ## Technology
 
@@ -91,9 +92,9 @@ No performance score is claimed without a repeatable browser audit.
 
 Project descriptions focus on what was built, what went wrong, and how the issue was solved. Decorative elements support navigation and hierarchy rather than replacing technical content.
 
-### A small JavaScript surface
+### A focused JavaScript surface
 
-Filtering and mobile navigation need JavaScript, but most content remains readable without it. Expandable project notes use the browser’s native `<details>` element.
+Filtering, mobile navigation, scroll progress, and pointer-based depth use a small JavaScript module, but the content remains readable without it. Expandable project notes use the browser's native `<details>` element, and motion respects the user's reduced-motion preference.
 
 ### Honest placeholders
 
@@ -101,11 +102,11 @@ Personal contact links are not invented. The private version explicitly withhold
 
 ### Placement availability without dominating the introduction
 
-The hero establishes identity and technical direction first. Specific 2027–28 placement availability appears later beside the main recruiter action, where it is useful without making the opening feel like a job-board profile.
+The hero establishes identity and technical direction first. Specific 2027-28 placement availability appears later beside the main recruiter action, where it is useful without making the opening feel like a job-board profile.
 
 ## Next improvements
 
-- Add verified GitHub, LinkedIn, and email links.
+- Add verified LinkedIn and email links.
 - Replace the generated profile PDF with the final ATS-reviewed placement CV.
 - Add repository and demo links to each completed project.
 - Add real screenshots or short product walkthroughs once project interfaces are final.
@@ -114,4 +115,3 @@ The hero establishes identity and technical direction first. Specific 2027–28 
 ## Author
 
 Designed and built by **Tayeba Khan**, a BSc Computer Science (Artificial Intelligence) student at Brunel University London.
-
