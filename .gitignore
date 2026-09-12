@@ -1,0 +1,7 @@
+node_modules/
+dist/
+qa/
+desktop.png
+mobile.png
+*.tar.gz
+.DS_Store
