@@ -4,7 +4,7 @@ A recruiter-focused personal portfolio designed and built for software engineeri
 
 This project turns a traditional CV into a more useful browsing experience: recruiters can scan the essentials quickly, filter projects by technical area, and expand individual case studies to see the engineering decisions behind the final result.
 
-> **Status:** The site is currently deployed privately while personal contact details and final project links are being prepared.
+> **Status:** The portfolio is configured for public deployment through GitHub Pages. The Sites version remains private.
 
 ## Why I built it
 
@@ -76,6 +76,14 @@ Regenerate the CV after editing its source content:
 ```bash
 python tools/generate_cv.py
 ```
+
+## Public deployment
+
+The production website is deployed through GitHub Actions to:
+
+**https://tayebakhan.github.io/tayeba-portfolio/**
+
+Every push to `main` installs the locked dependencies, creates a Vite production build, and publishes the `dist` directory to GitHub Pages. The Vite base path changes only inside GitHub Actions, so local builds and the private Sites deployment continue to use root-relative assets.
 
 ## Validation
 

@@ -72,7 +72,7 @@ story = []
 header = Table(
     [[
         Paragraph("TAYEBA KHAN", styles["name"]),
-        Paragraph("London, United Kingdom<br/>linkedin.com/in/tayebakhan2410<br/>github.com/tayebakhan/tayeba-portfolio<br/><link href='https://tayeba-khan-portfolio.tayebakhan2410.chatgpt.site'>Portfolio website</link>", styles["meta"]),
+        Paragraph("London, United Kingdom<br/>linkedin.com/in/tayebakhan2410<br/>github.com/tayebakhan/tayeba-portfolio<br/><link href='https://tayebakhan.github.io/tayeba-portfolio/'>Portfolio website</link>", styles["meta"]),
     ]],
     colWidths=[116 * mm, 64 * mm],
 )
