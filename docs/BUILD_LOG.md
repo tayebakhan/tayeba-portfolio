@@ -44,7 +44,7 @@ This log records the decisions and technical lessons behind the portfolio so the
 
 **Task:** Make the section faster to scan and give each type of information a clear home.
 
-**Action:** I replaced the mixed layout with five numbered groups: Education, Technical Toolkit, Leadership & Achievements, Professional Experience, and Part-time Experience. Graded coursework now has a dedicated results grid instead of being buried in a paragraph.
+**Action:** I replaced the mixed layout with three numbered groups: Education, Technical Toolkit, and Experience & Leadership. Each group uses one consistent internal structure and its own visual boundary.
 
 **Result:** The profile now has a visible hierarchy, cleaner alignment, and less competition between unrelated content.
 
@@ -74,14 +74,26 @@ This log records the decisions and technical lessons behind the portfolio so the
 
 **Learning point:** Deployment is part of software quality: source state, built artifacts, access control, and the live version must all agree.
 
-## 7. Adding motion without losing clarity
+## 7. Making soft skills provable
 
-**Situation:** The first complete version was clean and usable, but it felt too static beside more expressive developer portfolios.
+**Situation:** Teamwork, leadership, research, and communication matter to placement recruiters, but listing them without context would feel generic.
 
-**Task:** Add a stronger sense of craft without copying a reference site or making the page feel effects-led.
+**Task:** Show where those skills were used while keeping the profile easy to scan.
 
-**Action:** I added a progress indicator tied to page scroll, pointer-responsive depth and lighting on the LifeOS panel, animated project-filter transitions, tactile project-card hovers, and a hand-drawn underline reveal. Every effect is disabled or simplified when reduced motion is requested.
+**Action:** I reframed the READY finalist experience around research, critical thinking, collaboration, and presentation. I also turned the university group task into a challenge-action-result case study and separated each club committee role.
 
-**Result:** The portfolio feels more responsive and distinctive while the content hierarchy remains the main focus.
+**Result:** Each soft skill now has a visible proof point, and interactive cards let recruiters scan the headings before reading the supporting evidence.
 
-**Learning point:** Good interface motion explains state or rewards interaction. It should be layered onto a clear information architecture, not used to hide a weak one.
+**Learning point:** A skill becomes more credible when the interface connects it to a specific situation, action, and outcome.
+
+## 8. Adding personality with controlled motion
+
+**Situation:** The polished first version was clear but too restrained to communicate the creative person behind the technical work.
+
+**Task:** Add visual energy and personal detail without copying another portfolio or distracting from recruiter content.
+
+**Action:** I introduced a layered personal collage, hover-responsive skill and club cards, a subtle pointer tilt, a moving interest line, and a page progress indicator. Motion turns off for people who prefer reduced movement and collapses cleanly on smaller screens.
+
+**Result:** The site feels more individual and exploratory while keeping projects and qualifications in the strongest positions.
+
+**Learning point:** Movement works best when it reinforces hierarchy and personality, rather than behaving like a decorative effect applied everywhere.

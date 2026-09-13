@@ -1,9 +1,10 @@
 import './styles.css';
 
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 const menuButton = document.querySelector('.menu-button');
 const nav = document.querySelector('.site-nav');
 const navLinks = document.querySelectorAll('.site-nav a');
-const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 menuButton.addEventListener('click', () => {
   const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
@@ -44,10 +45,10 @@ filters.forEach((button) => {
         if (!reduceMotion) {
           project.animate(
             [
-              { opacity: 0, transform: 'translateY(9px)' },
+              { opacity: 0, transform: 'translateY(12px)' },
               { opacity: 1, transform: 'translateY(0)' },
             ],
-            { duration: 260, easing: 'cubic-bezier(.2, .8, .2, 1)' }
+            { duration: 320, easing: 'cubic-bezier(.2,.8,.2,1)' }
           );
         }
       }
@@ -60,56 +61,79 @@ filters.forEach((button) => {
 document.querySelectorAll('details').forEach((detail) => {
   detail.addEventListener('toggle', () => {
     const symbol = detail.querySelector('summary span');
-    symbol.textContent = detail.open ? '−' : '+';
+    symbol.textContent = detail.open ? '-' : '+';
   });
 });
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.08 }
-);
+if (reduceMotion) {
+  document.querySelectorAll('.reveal').forEach((element) => element.classList.add('visible'));
+} else {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.08 }
+  );
 
-document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
+  document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
+}
 
 const header = document.querySelector('[data-header]');
-const updateScroll = () => {
-  const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-  const progress = maxScroll > 0 ? window.scrollY / maxScroll : 0;
-  document.documentElement.style.setProperty('--scroll-progress', Math.min(progress, 1));
+const scrollProgress = document.querySelector('[data-scroll-progress]');
+const updateScrollEffects = () => {
+  const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = scrollable > 0 ? Math.min(window.scrollY / scrollable, 1) : 0;
   header.classList.toggle('scrolled', window.scrollY > 24);
+  scrollProgress.style.transform = `scaleX(${progress})`;
 };
 
-window.addEventListener('scroll', updateScroll, { passive: true });
-window.addEventListener('resize', updateScroll, { passive: true });
-updateScroll();
+window.addEventListener('scroll', () => {
+  updateScrollEffects();
+}, { passive: true });
+updateScrollEffects();
 
 const tiltBoard = document.querySelector('[data-tilt]');
-const finePointer = window.matchMedia('(pointer: fine)').matches;
-
 if (tiltBoard && finePointer && !reduceMotion) {
   tiltBoard.addEventListener('pointermove', (event) => {
     const bounds = tiltBoard.getBoundingClientRect();
-    const x = (event.clientX - bounds.left) / bounds.width;
-    const y = (event.clientY - bounds.top) / bounds.height;
-
-    tiltBoard.style.setProperty('--tilt-x', `${(0.5 - y) * 5}deg`);
-    tiltBoard.style.setProperty('--tilt-y', `${(x - 0.5) * 7}deg`);
-    tiltBoard.style.setProperty('--glow-x', `${x * 100}%`);
-    tiltBoard.style.setProperty('--glow-y', `${y * 100}%`);
+    const x = (event.clientX - bounds.left) / bounds.width - 0.5;
+    const y = (event.clientY - bounds.top) / bounds.height - 0.5;
+    tiltBoard.style.setProperty('--tilt-x', `${x * 5}deg`);
+    tiltBoard.style.setProperty('--tilt-y', `${y * -5}deg`);
+    tiltBoard.style.setProperty('--glow-x', `${(x + 0.5) * 100}%`);
+    tiltBoard.style.setProperty('--glow-y', `${(y + 0.5) * 100}%`);
   });
-
   tiltBoard.addEventListener('pointerleave', () => {
     tiltBoard.style.setProperty('--tilt-x', '0deg');
     tiltBoard.style.setProperty('--tilt-y', '0deg');
     tiltBoard.style.setProperty('--glow-x', '50%');
     tiltBoard.style.setProperty('--glow-y', '50%');
+  });
+}
+
+const personalStage = document.querySelector('[data-personal-stage]');
+if (personalStage && finePointer && !reduceMotion) {
+  const personalCards = [...personalStage.querySelectorAll('[data-depth]')];
+  personalStage.addEventListener('pointermove', (event) => {
+    const bounds = personalStage.getBoundingClientRect();
+    const x = (event.clientX - bounds.left) / bounds.width - 0.5;
+    const y = (event.clientY - bounds.top) / bounds.height - 0.5;
+    personalCards.forEach((card) => {
+      const depth = Number(card.dataset.depth || 1);
+      card.style.setProperty('--parallax-x', `${x * 13 * depth}px`);
+      card.style.setProperty('--parallax-y', `${y * 10 * depth}px`);
+    });
+  });
+  personalStage.addEventListener('pointerleave', () => {
+    personalCards.forEach((card) => {
+      card.style.setProperty('--parallax-x', '0px');
+      card.style.setProperty('--parallax-y', '0px');
+    });
   });
 }
 

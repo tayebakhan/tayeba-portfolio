@@ -19,8 +19,8 @@ doc = SimpleDocTemplate(
     pagesize=A4,
     rightMargin=15 * mm,
     leftMargin=15 * mm,
-    topMargin=14 * mm,
-    bottomMargin=13 * mm,
+    topMargin=11 * mm,
+    bottomMargin=10 * mm,
     title="Tayeba Khan - CV",
     author="Tayeba Khan",
 )
@@ -37,7 +37,7 @@ styles = {
     ),
     "section": ParagraphStyle(
         "section", fontName="Helvetica-Bold", fontSize=8.2, leading=10, textColor=SIGNAL,
-        spaceBefore=8, spaceAfter=5, uppercase=True
+        spaceBefore=6, spaceAfter=3, uppercase=True
     ),
     "role": ParagraphStyle(
         "role", fontName="Helvetica-Bold", fontSize=10.2, leading=12.5, textColor=INK, spaceAfter=1
@@ -50,7 +50,7 @@ styles = {
     ),
     "bullet": ParagraphStyle(
         "bullet", fontName="Helvetica", fontSize=8.2, leading=11, textColor=INK,
-        leftIndent=8, firstLineIndent=-5, bulletIndent=0, spaceAfter=1.5
+        leftIndent=8, firstLineIndent=-5, bulletIndent=0, spaceAfter=1
     ),
     "small": ParagraphStyle(
         "small", fontName="Helvetica", fontSize=7.8, leading=10.5, textColor=INK
@@ -72,7 +72,7 @@ story = []
 header = Table(
     [[
         Paragraph("TAYEBA KHAN", styles["name"]),
-        Paragraph("London, United Kingdom<br/>github.com/tayebakhan<br/>Software engineering &amp; AI placement candidate", styles["meta"]),
+        Paragraph("London, United Kingdom<br/>linkedin.com/in/tayebakhan2410<br/>github.com/tayebakhan/tayeba-portfolio", styles["meta"]),
     ]],
     colWidths=[116 * mm, 64 * mm],
 )
@@ -100,7 +100,6 @@ edu.setStyle(TableStyle([("VALIGN", (0, 0), (-1, -1), "TOP")]))
 story.extend([
     edu,
     Paragraph("Brunel University London", styles["sub"]),
-    bullet("Relevant study: software design and implementation, introductory programming, logic and computation, databases, information systems, and collaborative project delivery."),
     bullet("Selected results: Logic and Computation (A*); Information Systems and Organisations (A); Software Design and Implementation (A); Introductory Programming (B+); Programming Applications (B+)."),
 ])
 
@@ -139,23 +138,37 @@ skills.setStyle(TableStyle([
 ]))
 story.append(skills)
 
-story.append(Paragraph("EXPERIENCE & LEADERSHIP", styles["section"]))
+story.append(Paragraph("LEADERSHIP &amp; ACHIEVEMENTS", styles["section"]))
 story.extend([
     Paragraph("READY Programme Finalist - 2025", styles["role"]),
-    bullet("Recognised for professional development, initiative, and career readiness through Brunel University's READY Programme."),
-    Paragraph("Group Project - Task Lead", styles["role"]),
-    bullet("Planned work, distributed roles, set soft deadlines, and kept a university team moving when communication slowed."),
-    Paragraph("Professional experience", styles["role"]),
-    bullet("Marketing Intern at MarcoPolo.ai, IELTS Instructor at Mentors' Bangladesh, and Content Writer at Falcon Academy of Sciences."),
-    Paragraph("Part-time & customer-facing experience", styles["role"]),
-    bullet("Back of House at Nando's Westfield, Cashier at North End Coffee Roasters, and Store Assistant/Cashier at Shwapno."),
+    bullet("Researched an unfamiliar brief, assessed evidence critically, shaped findings into a clear recommendation, and presented collaboratively."),
+    Paragraph("University Group Project - Task 6 Lead", styles["role"]),
+    bullet("Arranged meetings, distributed responsibilities, set soft deadlines, and followed up to bring delayed contributions into one completed submission."),
+    Paragraph("Club Leadership", styles["role"]),
+    bullet("Served as General Secretary of the Earth and Nature Club, Communication Chair of the Debate Club, and Organising Secretary of the Art Club."),
+])
+
+story.append(Paragraph("PROFESSIONAL EXPERIENCE", styles["section"]))
+story.extend([
+    Paragraph("Marketing Intern - MarcoPolo.ai", styles["role"]),
+    bullet("Developed audience-aware communication and an understanding of how technology is positioned around real user needs."),
+    Paragraph("Content Writer - Falcon Academy of Sciences", styles["role"]),
+    bullet("Researched topics, structured information, and produced clear content for an intended audience."),
+])
+
+story.append(Paragraph("PART-TIME EXPERIENCE", styles["section"]))
+story.extend([
+    Paragraph("Back of House - Nando’s Westfield", styles["role"]),
+    bullet("Maintained accuracy during high-volume service and coordinated opening, closing, restocking, and rush-period work within a fast team."),
+    Paragraph("IELTS Instructor - Mentors’ Bangladesh", styles["role"]),
+    bullet("Explained unfamiliar ideas simply, adapted to different learners, and communicated confidently with varied audiences."),
 ])
 
 story.append(Spacer(1, 5))
 story.append(rule())
 story.append(Spacer(1, 5))
 story.append(Paragraph(
-    "This private portfolio version intentionally omits personal email and LinkedIn details. Add those verified links before sharing with recruiters.",
+    "Portfolio: tayeba-khan-portfolio.tayebakhan2410.chatgpt.site | Art: instagram.com/artcartby.tayeba",
     styles["sub"],
 ))
 

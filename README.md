@@ -21,10 +21,11 @@ The result is deliberately editorial and compact. It uses strong typography, vis
 - **Flagship project storytelling** - LifeOS receives the deepest case study, with its problem, technical approach, and reliability decisions made visible.
 - **Project filtering** - recruiters can switch between AI + cloud, software, and robotics work without leaving the page.
 - **Expandable engineering notes** - native accessible disclosure controls reveal challenges, approaches, and solutions on demand.
-- **Structured profile** - education, graded coursework, technical toolkit, leadership, professional experience, and part-time work are separated into clear numbered sections.
-- **Purposeful motion** - scroll progress, cursor-responsive depth, animated project states, and tactile hover feedback add character without distracting from the content.
+- **Structured profile** - education, technical skills, leadership, professional work, part-time roles, and personal interests each have a clear numbered section.
+- **Evidence-backed soft skills** - the READY finalist experience and university task leadership connect research, critical thinking, teamwork, and planning to concrete examples.
+- **Personal layer** - a playful interactive collage introduces Tayeba’s painting background, gallery interests, travel, friendships, and art business.
+- **Purposeful movement** - project filters animate, the LifeOS board tilts gently, personal cards respond to the pointer, and hover states reward exploration.
 - **Downloadable CV** - a one-page PDF profile is generated and bundled with the production build.
-- **Responsive navigation** - the layout and navigation adapt for desktop, tablet, and mobile screens.
 - **Accessibility details** - semantic HTML, keyboard-visible focus states, reduced-motion support, live filter feedback, and a skip link.
 
 ## Technology
@@ -92,21 +93,21 @@ No performance score is claimed without a repeatable browser audit.
 
 Project descriptions focus on what was built, what went wrong, and how the issue was solved. Decorative elements support navigation and hierarchy rather than replacing technical content.
 
-### A focused JavaScript surface
+### A small JavaScript surface
 
-Filtering, mobile navigation, scroll progress, and pointer-based depth use a small JavaScript module, but the content remains readable without it. Expandable project notes use the browser's native `<details>` element, and motion respects the user's reduced-motion preference.
+Filtering and mobile navigation need JavaScript, but most content remains readable without it. Expandable project notes use the browser’s native `<details>` element.
 
-### Honest placeholders
+### Personal without losing focus
 
-Personal contact links are not invented. The private version explicitly withholds unverified email, GitHub, and LinkedIn details until they can be added accurately.
+The site gives recruiters a clear technical story first, then reveals creative interests through a more expressive personal section. Verified GitHub, LinkedIn, and Instagram links are included; unverified contact information is still omitted.
 
-### Placement availability without dominating the introduction
+### Placement interest without dominating the introduction
 
-The hero establishes identity and technical direction first. Specific 2027-28 placement availability appears later beside the main recruiter action, where it is useful without making the opening feel like a job-board profile.
+The hero establishes identity and technical direction first. Placement interest appears later beside the main recruiter action, where it is useful without making the opening feel like a job-board profile.
 
 ## Next improvements
 
-- Add verified LinkedIn and email links.
+- Add a verified email address when ready for recruiter outreach.
 - Replace the generated profile PDF with the final ATS-reviewed placement CV.
 - Add repository and demo links to each completed project.
 - Add real screenshots or short product walkthroughs once project interfaces are final.
