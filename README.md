@@ -22,7 +22,8 @@ The result is deliberately dark, editorial, and compact. It uses strong typograp
 - **Project filtering** - recruiters can switch between AI + cloud, software, and robotics work without leaving the page.
 - **Expandable engineering notes** - native accessible disclosure controls reveal challenges, approaches, and solutions on demand.
 - **Stacked technical toolkit** - programming languages, including C and C++, development tools such as Eclipse, and wider engineering practice are organised into layered cards.
-- **Consistent leadership system** - six matching, expandable impact cards connect research, leadership, teamwork, mentoring, and operations to specific evidence.
+- **Consistent impact system** - seven matching, expandable cards connect technical problem-solving, research, leadership, teamwork, mentoring, and operations to specific evidence.
+- **Verified technical achievement** - first place in Brunel’s Java Intro HackerRank competition is supported by the exact final-challenge completion time.
 - **Separated experience** - professional internships and part-time work have distinct recruiter-friendly sections.
 - **Personal layer** - an interactive card grid introduces painting, art history, travel, target shooting, Muay Thai, networking, and Tayeba’s art business.
 - **Purposeful movement** - project filters animate, the LifeOS board tilts gently, impact cards respond in 3D, personal cards use subtle parallax, and hover states reward exploration.

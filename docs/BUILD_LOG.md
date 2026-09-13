@@ -109,3 +109,15 @@ This log records the decisions and technical lessons behind the portfolio so the
 **Result:** Every major content type now has a repeatable pattern, while colour, spacing, and motion create depth without hiding the evidence.
 
 **Learning point:** A strong component system does not require every section to look identical; it requires repeated rules that make different content feel related.
+
+## 10. Turning a result into credible evidence
+
+**Situation:** A first-place Java competition result was stronger than a generic claim about problem-solving speed.
+
+**Task:** Add the achievement without breaking the site’s consistent impact-card architecture or overstating what the result proved.
+
+**Action:** I made the Brunel x HackerRank result the featured impact card and recorded only the verified facts: first place, the Java Priority Queue challenge, and a 28-minute completion time. The card expands to show the relevant technical skills and the same result is reflected in the CV.
+
+**Result:** Recruiters can see a concise technical achievement immediately and open it for evidence, while the rest of the leadership section retains the same interaction pattern.
+
+**Learning point:** Specific, verifiable outcomes are more persuasive than broad skill labels.

@@ -20,7 +20,7 @@ doc = SimpleDocTemplate(
     rightMargin=15 * mm,
     leftMargin=15 * mm,
     topMargin=8 * mm,
-    bottomMargin=8 * mm,
+    bottomMargin=5 * mm,
     title="Tayeba Khan - CV",
     author="Tayeba Khan",
 )
@@ -72,7 +72,7 @@ story = []
 header = Table(
     [[
         Paragraph("TAYEBA KHAN", styles["name"]),
-        Paragraph("London, United Kingdom<br/>linkedin.com/in/tayebakhan2410<br/>github.com/tayebakhan/tayeba-portfolio", styles["meta"]),
+        Paragraph("London, United Kingdom<br/>linkedin.com/in/tayebakhan2410<br/>github.com/tayebakhan/tayeba-portfolio<br/><link href='https://tayeba-khan-portfolio.tayebakhan2410.chatgpt.site'>Portfolio website</link>", styles["meta"]),
     ]],
     colWidths=[116 * mm, 64 * mm],
 )
@@ -140,6 +140,8 @@ story.append(skills)
 
 story.append(Paragraph("LEADERSHIP &amp; ACHIEVEMENTS", styles["section"]))
 story.extend([
+    Paragraph("1st Place - Brunel x HackerRank Java Intro Contest | 2026", styles["role"]),
+    bullet("Solved the final Java Priority Queue challenge in 28 minutes, finishing 17 minutes ahead of the second-place completion time."),
     Paragraph("READY Programme Finalist - ClayClean | 2025", styles["role"]),
     bullet("Researched the needs of displaced families in Afghanistan, completed a SWOT analysis, planned a £5,000 first-year budget and presented a 150-filter proposal to a judging panel."),
     Paragraph("University Group Project - Task 6 Lead", styles["role"]),
@@ -165,13 +167,5 @@ story.extend([
     Paragraph("IELTS Instructor - Mentors’ Bangladesh", styles["role"]),
     bullet("Explained unfamiliar ideas simply, adapted to different learners, and communicated confidently with varied audiences."),
 ])
-
-story.append(Spacer(1, 5))
-story.append(rule())
-story.append(Spacer(1, 5))
-story.append(Paragraph(
-    "Portfolio: tayeba-khan-portfolio.tayebakhan2410.chatgpt.site | Art: instagram.com/artcartby.tayeba",
-    styles["sub"],
-))
 
 doc.build(story, onFirstPage=lambda c, d: c.setFillColor(PAPER) or c.rect(0, 0, A4[0], A4[1], fill=1, stroke=0))

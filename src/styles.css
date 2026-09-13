@@ -246,12 +246,17 @@ summary::-webkit-details-marker { display: none; }
 .leadership-group.visible .impact-card:nth-child(4) { animation-delay: .21s; }
 .leadership-group.visible .impact-card:nth-child(5) { animation-delay: .28s; }
 .leadership-group.visible .impact-card:nth-child(6) { animation-delay: .35s; }
+.leadership-group.visible .impact-card:nth-child(7) { animation-delay: .42s; }
 .impact-card:hover, .impact-card:focus-within { --card-lift: -5px; z-index: 3; border-color: var(--line-bright); box-shadow: 0 24px 50px rgba(0,0,0,.36); }
 .impact-card::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 3px; background: linear-gradient(var(--signal), var(--violet), var(--cyan)); transform: scaleY(0); transform-origin: top; transition: transform .35s; }
 .impact-card:hover::before, .impact-card[open]::before { transform: scaleY(1); }
 .impact-card summary { display: grid; grid-template-columns: 35px minmax(0, 1fr) 24px; gap: 13px; align-items: start; min-height: 205px; padding: 24px; }
 .impact-card summary > span:last-child { display: grid; place-items: center; width: 24px; height: 24px; border: 1px solid var(--line-bright); border-radius: 50%; color: var(--acid); font-size: 17px; line-height: 1; transition: transform .25s, background .25s, color .25s; }
 .impact-card[open] summary > span:last-child { background: var(--acid); color: #080a0f; transform: rotate(45deg); }
+.impact-featured { grid-column: 1 / -1; background: linear-gradient(120deg, rgba(124,140,255,.18), rgba(193,243,106,.07) 55%, var(--surface)); border-color: rgba(193,243,106,.34); }
+.impact-featured summary { min-height: 178px; }
+.impact-featured .impact-number { color: var(--acid); }
+.impact-featured .impact-title strong { color: var(--acid); font-size: clamp(28px, 3vw, 38px); }
 .impact-number { padding-top: 2px; color: var(--signal); font: 850 11px/1.4 ui-monospace, monospace; }
 .impact-title { display: flex; flex-direction: column; min-width: 0; }
 .impact-title small { min-height: 35px; color: var(--cyan); font-size: 11px; font-style: normal; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; }
@@ -329,6 +334,7 @@ footer a { color: var(--ink); font-weight: 800; }
   .course-results { grid-template-columns: repeat(2, 1fr); }
   .skill-layer { grid-template-columns: 1fr; }
   .leadership-deck { grid-template-columns: 1fr; }
+  .impact-featured { grid-column: auto; }
   .impact-card summary { min-height: 175px; }
   .hobby-grid { grid-template-columns: repeat(2, 1fr); }
   .contact-strip { grid-template-columns: 1fr 1fr; }
