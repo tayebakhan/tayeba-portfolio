@@ -60,10 +60,30 @@ filters.forEach((button) => {
 
 document.querySelectorAll('details').forEach((detail) => {
   detail.addEventListener('toggle', () => {
-    const symbol = detail.querySelector('summary span');
-    symbol.textContent = detail.open ? '-' : '+';
+    const symbol = detail.querySelector('summary > span:last-child');
+    if (symbol) {
+      symbol.textContent = detail.open ? '-' : '+';
+    }
   });
 });
+
+const impactCards = [...document.querySelectorAll('[data-card-tilt]')];
+if (impactCards.length && finePointer && !reduceMotion) {
+  impactCards.forEach((card) => {
+    card.addEventListener('pointermove', (event) => {
+      const bounds = card.getBoundingClientRect();
+      const x = (event.clientX - bounds.left) / bounds.width - 0.5;
+      const y = (event.clientY - bounds.top) / bounds.height - 0.5;
+      card.style.setProperty('--card-ry', `${x * 3.5}deg`);
+      card.style.setProperty('--card-rx', `${y * -3.5}deg`);
+    });
+
+    card.addEventListener('pointerleave', () => {
+      card.style.setProperty('--card-rx', '0deg');
+      card.style.setProperty('--card-ry', '0deg');
+    });
+  });
+}
 
 if (reduceMotion) {
   document.querySelectorAll('.reveal').forEach((element) => element.classList.add('visible'));
@@ -95,6 +115,7 @@ const updateScrollEffects = () => {
 window.addEventListener('scroll', () => {
   updateScrollEffects();
 }, { passive: true });
+window.addEventListener('resize', updateScrollEffects, { passive: true });
 updateScrollEffects();
 
 const tiltBoard = document.querySelector('[data-tilt]');

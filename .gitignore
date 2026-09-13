@@ -3,6 +3,7 @@ __pycache__/
 *.pyc
 dist/
 qa/
+upload/
 desktop.png
 mobile.png
 *.tar.gz

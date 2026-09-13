@@ -14,17 +14,18 @@ Many student portfolios either repeat a CV word-for-word or prioritize visual ef
 - How do I solve technical problems?
 - What would I bring to a placement team?
 
-The result is deliberately editorial and compact. It uses strong typography, visible structure, and small purposeful interactions rather than a template-heavy dashboard or an effects-led “AI” aesthetic.
+The result is deliberately dark, editorial, and compact. It uses strong typography, layered surfaces, and purposeful interactions rather than a template-heavy dashboard or an effects-led “AI” aesthetic.
 
 ## Key features
 
 - **Flagship project storytelling** - LifeOS receives the deepest case study, with its problem, technical approach, and reliability decisions made visible.
 - **Project filtering** - recruiters can switch between AI + cloud, software, and robotics work without leaving the page.
 - **Expandable engineering notes** - native accessible disclosure controls reveal challenges, approaches, and solutions on demand.
-- **Structured profile** - education, technical skills, leadership, professional work, part-time roles, and personal interests each have a clear numbered section.
-- **Evidence-backed soft skills** - the READY finalist experience and university task leadership connect research, critical thinking, teamwork, and planning to concrete examples.
-- **Personal layer** - a playful interactive collage introduces Tayeba’s painting background, gallery interests, travel, friendships, and art business.
-- **Purposeful movement** - project filters animate, the LifeOS board tilts gently, personal cards respond to the pointer, and hover states reward exploration.
+- **Stacked technical toolkit** - programming languages, including C and C++, development tools such as Eclipse, and wider engineering practice are organised into layered cards.
+- **Consistent leadership system** - six matching, expandable impact cards connect research, leadership, teamwork, mentoring, and operations to specific evidence.
+- **Separated experience** - professional internships and part-time work have distinct recruiter-friendly sections.
+- **Personal layer** - an interactive card grid introduces painting, art history, travel, target shooting, Muay Thai, networking, and Tayeba’s art business.
+- **Purposeful movement** - project filters animate, the LifeOS board tilts gently, impact cards respond in 3D, personal cards use subtle parallax, and hover states reward exploration.
 - **Downloadable CV** - a one-page PDF profile is generated and bundled with the production build.
 - **Accessibility details** - semantic HTML, keyboard-visible focus states, reduced-motion support, live filter feedback, and a skip link.
 
@@ -99,7 +100,7 @@ Filtering and mobile navigation need JavaScript, but most content remains readab
 
 ### Personal without losing focus
 
-The site gives recruiters a clear technical story first, then reveals creative interests through a more expressive personal section. Verified GitHub, LinkedIn, and Instagram links are included; unverified contact information is still omitted.
+The site gives recruiters a clear technical story first, then reveals creative and sporting interests through an interactive card grid. Verified GitHub, LinkedIn, and Instagram links are included; unverified contact information is still omitted.
 
 ### Placement interest without dominating the introduction
 

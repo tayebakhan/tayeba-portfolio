@@ -19,8 +19,8 @@ doc = SimpleDocTemplate(
     pagesize=A4,
     rightMargin=15 * mm,
     leftMargin=15 * mm,
-    topMargin=11 * mm,
-    bottomMargin=10 * mm,
+    topMargin=8 * mm,
+    bottomMargin=8 * mm,
     title="Tayeba Khan - CV",
     author="Tayeba Khan",
 )
@@ -37,10 +37,10 @@ styles = {
     ),
     "section": ParagraphStyle(
         "section", fontName="Helvetica-Bold", fontSize=8.2, leading=10, textColor=SIGNAL,
-        spaceBefore=6, spaceAfter=3, uppercase=True
+        spaceBefore=5, spaceAfter=2.5, uppercase=True
     ),
     "role": ParagraphStyle(
-        "role", fontName="Helvetica-Bold", fontSize=10.2, leading=12.5, textColor=INK, spaceAfter=1
+        "role", fontName="Helvetica-Bold", fontSize=9.9, leading=11.8, textColor=INK, spaceAfter=1
     ),
     "sub": ParagraphStyle(
         "sub", fontName="Helvetica", fontSize=8.1, leading=10.5, textColor=MUTED, spaceAfter=3
@@ -49,7 +49,7 @@ styles = {
         "body", fontName="Helvetica", fontSize=8.4, leading=11.6, textColor=INK, spaceAfter=3
     ),
     "bullet": ParagraphStyle(
-        "bullet", fontName="Helvetica", fontSize=8.2, leading=11, textColor=INK,
+        "bullet", fontName="Helvetica", fontSize=8, leading=10.4, textColor=INK,
         leftIndent=8, firstLineIndent=-5, bulletIndent=0, spaceAfter=1
     ),
     "small": ParagraphStyle(
@@ -92,7 +92,7 @@ story.append(Paragraph("EDUCATION", styles["section"]))
 edu = Table(
     [[
         Paragraph("BSc Computer Science (Artificial Intelligence)", styles["role"]),
-        Paragraph("2025 - present", styles["meta"]),
+        Paragraph("Sep 2025 - Jun 2029", styles["meta"]),
     ]],
     colWidths=[143 * mm, 37 * mm],
 )
@@ -124,7 +124,7 @@ story.extend([
 story.append(Paragraph("TECHNICAL SKILLS", styles["section"]))
 skills = Table(
     [
-        [Paragraph("Languages", styles["role"]), Paragraph("Java, Python, SQL, JavaScript, HTML/CSS", styles["small"])],
+        [Paragraph("Languages", styles["role"]), Paragraph("Java, Python, C, C++, SQL, JavaScript, HTML/CSS", styles["small"])],
         [Paragraph("Tools", styles["role"]), Paragraph("Git, Maven, Google ADK, Gemini API, Google Cloud, Eclipse, VS Code", styles["small"])],
         [Paragraph("Practices", styles["role"]), Paragraph("OOP, REST APIs, testing, requirements analysis, debugging, documentation, team leadership", styles["small"])],
     ],
@@ -140,25 +140,27 @@ story.append(skills)
 
 story.append(Paragraph("LEADERSHIP &amp; ACHIEVEMENTS", styles["section"]))
 story.extend([
-    Paragraph("READY Programme Finalist - 2025", styles["role"]),
-    bullet("Researched an unfamiliar brief, assessed evidence critically, shaped findings into a clear recommendation, and presented collaboratively."),
+    Paragraph("READY Programme Finalist - ClayClean | 2025", styles["role"]),
+    bullet("Researched the needs of displaced families in Afghanistan, completed a SWOT analysis, planned a £5,000 first-year budget and presented a 150-filter proposal to a judging panel."),
     Paragraph("University Group Project - Task 6 Lead", styles["role"]),
     bullet("Arranged meetings, distributed responsibilities, set soft deadlines, and followed up to bring delayed contributions into one completed submission."),
     Paragraph("Club Leadership", styles["role"]),
-    bullet("Served as General Secretary of the Earth and Nature Club, Communication Chair of the Debate Club, and Organising Secretary of the Art Club."),
+    bullet("Served as Secretary of the Debating Club, Secretary General of the Earth and Nature Club, and Organizing Secretary of the Art Club at Rajuk College."),
+    Paragraph("Operations Executive - Rise of Youth Community Global | 2021", styles["role"]),
+    bullet("Supported international campaign delivery, coordinated reporting, and helped lead 106 core members from 13 nations across eight departments."),
 ])
 
 story.append(Paragraph("PROFESSIONAL EXPERIENCE", styles["section"]))
 story.extend([
-    Paragraph("Marketing Intern - MarcoPolo.ai", styles["role"]),
-    bullet("Developed audience-aware communication and an understanding of how technology is positioned around real user needs."),
-    Paragraph("Content Writer - Falcon Academy of Sciences", styles["role"]),
-    bullet("Researched topics, structured information, and produced clear content for an intended audience."),
+    Paragraph("Ambassadorship Award - Markopolo.ai | 2021", styles["role"]),
+    bullet("Completed the Academy Ambassadors Program under a Forbes 30 Under 30 instructor, building foundations in marketing strategy and digital marketing."),
+    Paragraph("Content Writer - Falcon Academy of Sciences | Nov 2022 - Apr 2023", styles["role"]),
+    bullet("Researched academic topics, collaborated with subject specialists, and produced clear, accessible web and print content for different audiences."),
 ])
 
 story.append(Paragraph("PART-TIME EXPERIENCE", styles["section"]))
 story.extend([
-    Paragraph("Back of House - Nando’s Westfield", styles["role"]),
+    Paragraph("Back of House - Nando’s UK and IRE | Jan - May 2026", styles["role"]),
     bullet("Maintained accuracy during high-volume service and coordinated opening, closing, restocking, and rush-period work within a fast team."),
     Paragraph("IELTS Instructor - Mentors’ Bangladesh", styles["role"]),
     bullet("Explained unfamiliar ideas simply, adapted to different learners, and communicated confidently with varied audiences."),

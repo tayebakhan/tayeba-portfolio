@@ -92,8 +92,20 @@ This log records the decisions and technical lessons behind the portfolio so the
 
 **Task:** Add visual energy and personal detail without copying another portfolio or distracting from recruiter content.
 
-**Action:** I introduced a layered personal collage, hover-responsive skill and club cards, a subtle pointer tilt, a moving interest line, and a page progress indicator. Motion turns off for people who prefer reduced movement and collapses cleanly on smaller screens.
+**Action:** I introduced an interactive personal card grid, hover-responsive skill and leadership cards, subtle pointer tilt and parallax, a moving interest line, and a page progress indicator. Motion turns off for people who prefer reduced movement and collapses cleanly on smaller screens.
 
 **Result:** The site feels more individual and exploratory while keeping projects and qualifications in the strongest positions.
 
 **Learning point:** Movement works best when it reinforces hierarchy and personality, rather than behaving like a decorative effect applied everywhere.
+
+## 9. Unifying the dark visual system
+
+**Situation:** The leadership material had grown into several visual patterns, and the technical toolkit did not communicate enough breadth at a glance.
+
+**Task:** Make the experience feel more cohesive, technically substantial, and distinctive while preserving fast recruiter scanning.
+
+**Action:** I rebuilt the interface around a dark layered system. The toolkit became a stack of four interactive engineering layers, all leadership evidence moved into one expandable card component, and the personal section adopted a consistent eight-card architecture. I added restrained 3D response and parallax with keyboard and reduced-motion fallbacks.
+
+**Result:** Every major content type now has a repeatable pattern, while colour, spacing, and motion create depth without hiding the evidence.
+
+**Learning point:** A strong component system does not require every section to look identical; it requires repeated rules that make different content feel related.
