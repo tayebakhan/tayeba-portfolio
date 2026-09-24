@@ -75,11 +75,12 @@
         </div>
 
         <div class="filter-row reveal" role="toolbar" aria-label="Filter projects">
-          <button class="filter active" type="button" data-filter="all" aria-pressed="true">All <span>3</span></button>
-          <button class="filter" type="button" data-filter="ai" aria-pressed="false">AI + cloud <span>1</span></button>
-          <button class="filter" type="button" data-filter="software" aria-pressed="false">Software <span>3</span></button>
+          <button class="filter active" type="button" data-filter="all" aria-pressed="true">All <span>5</span></button>
+          <button class="filter" type="button" data-filter="ai" aria-pressed="false">AI + cloud <span>2</span></button>
+          <button class="filter" type="button" data-filter="software" aria-pressed="false">Software <span>5</span></button>
+          <button class="filter" type="button" data-filter="web" aria-pressed="false">Web <span>1</span></button>
           <button class="filter" type="button" data-filter="robotics" aria-pressed="false">Robotics <span>1</span></button>
-          <p class="filter-status" aria-live="polite">Showing 3 projects</p>
+          <p class="filter-status" aria-live="polite">Showing 5 projects</p>
         </div>
 
         <div class="project-grid">
@@ -112,8 +113,37 @@
             <div class="project-stamp" aria-hidden="true"><span>Evidence</span><i>→</i><span>Action</span></div>
           </article>
 
-          <article class="project-card reveal" data-category="software robotics">
+          <article class="project-card reveal" data-category="ai software">
             <div class="project-index">02</div>
+            <div class="project-main">
+              <div class="project-meta"><span>Independent build · Sep 2026 - present</span><span>Decision engine · Python</span></div>
+              <h3>Buy or Wait?</h3>
+              <p class="project-lead">An AI-assisted affordability system that forecasts 90 days of cash flow, tests payment strategies, and explains whether a purchase is safe now, with a plan, later, or not within the window.</p>
+              <ul class="project-chips" aria-label="Technologies">
+                <li>Python</li><li>Streamlit</li><li>Decimal</li><li>Gemini</li><li>Unit testing</li>
+              </ul>
+              <a
+                class="button button-quiet"
+                href="https://github.com/tayebakhan/buy-or-wait"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub Repository <span aria-hidden="true">↗</span>
+              </a>
+              <details>
+                <summary>View engineering notes <span aria-hidden="true">+</span></summary>
+                <div class="details-body">
+                  <div><strong>Challenge</strong><p>A bank balance alone cannot show whether a purchase is safe once bills, pending payments, confirmed income, currencies, and a minimum buffer are considered.</p></div>
+                  <div><strong>Approach</strong><p>Built a deterministic forecasting engine that joins financial evidence, learns recurring patterns, and compares full, partial, installment, delayed, and flexible-spending plans.</p></div>
+                  <div><strong>What I validated</strong><p>Added automated tests, output-schema checks, and a reproducible 25-scenario evaluation, while keeping AI limited to evidence extraction rather than the final decision.</p></div>
+                </div>
+              </details>
+            </div>
+            <div class="project-stamp stamp-finance" aria-hidden="true"><span>Forecast</span><i>→</i><span>Decide</span></div>
+          </article>
+
+          <article class="project-card reveal" data-category="software robotics">
+            <div class="project-index">03</div>
             <div class="project-main">
               <div class="project-meta"><span>University team project</span><span>Robotics · Java</span></div>
               <h3>SwiftBot Traffic-Light Rover</h3>
@@ -141,8 +171,37 @@
             <div class="project-stamp stamp-robot" aria-hidden="true"><span>Sense</span><i>→</i><span>Move</span></div>
           </article>
 
+          <article class="project-card reveal" data-category="software web">
+            <div class="project-index">04</div>
+            <div class="project-main">
+              <div class="project-meta"><span>Independent project · Sep 2026</span><span>Frontend · UX engineering</span></div>
+              <h3>Tayeba Portfolio</h3>
+              <p class="project-lead">A responsive recruiter-focused portfolio designed and built to present my technical work, experience, achievements, and creative interests as one clear, interactive story.</p>
+              <ul class="project-chips" aria-label="Technologies">
+                <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Vite</li><li>GitHub Actions</li><li>Responsive design</li>
+              </ul>
+              <a
+                class="button button-quiet"
+                href="https://github.com/tayebakhan/tayeba-portfolio"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub Repository <span aria-hidden="true">↗</span>
+              </a>
+              <details>
+                <summary>View engineering notes <span aria-hidden="true">+</span></summary>
+                <div class="details-body">
+                  <div><strong>Goal</strong><p>Help placement recruiters scan my strongest evidence quickly without flattening the personality, leadership, and creative work behind it.</p></div>
+                  <div><strong>Approach</strong><p>Used semantic HTML, a responsive dark interface, project filtering, expandable notes, keyboard-friendly interactions, and reduced-motion support.</p></div>
+                  <div><strong>What I solved</strong><p>Turned iterative feedback into a cohesive design system and set up automated GitHub Pages deployment so every approved update publishes reliably.</p></div>
+                </div>
+              </details>
+            </div>
+            <div class="project-stamp stamp-web" aria-hidden="true"><span>Design</span><i>→</i><span>Deploy</span></div>
+          </article>
+
           <article class="project-card reveal" data-category="software">
-            <div class="project-index">03</div>
+            <div class="project-index">05</div>
             <div class="project-main">
               <div class="project-meta"><span>Independent build</span><span>Core software · Java</span></div>
               <h3>Java Task Manager</h3>
